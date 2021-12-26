@@ -1,9 +1,9 @@
 const { Pool } = require("pg");
-import { DB_PASSWORD } from "dotenv/config";
+require('dotenv').config();
 
 const pool = new Pool({
   user: "postgres",
-  password: DB_PASSWORD,
+  password: process.env.DB_PASSWORD,
   host: "localhost",
   port: 5432,
   database: "taskdb",
