@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
-import Menu from './components/Navbar';
+import Menu from "./components/Navbar";
 import { Container } from "@mui/material";
 
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<TaskList />} />
           <Route path="/tasks/new" element={<TaskForm />} />
-          {/* Falta ruta editar */}
+          <Route path="/tasks/:id/edit" element={<TaskForm />} />
         </Routes>
       </Container>
     </BrowserRouter>
